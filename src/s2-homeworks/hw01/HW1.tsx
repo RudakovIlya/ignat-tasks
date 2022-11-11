@@ -3,7 +3,6 @@ import Message from './message/Message'
 import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
-import avatar from './avatar.png'
 
 /*
 * 1 - описать тип MessageType - done
@@ -23,7 +22,6 @@ type FirstMessageType = {
     text: string,
     time: string,
 }
-
 export type MessageType = {
     id: number,
     user: UserType,
@@ -34,22 +32,22 @@ export type MessageType = {
 export const message0: MessageType = {
     id: 0,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Dimych',  // можно менять
+        avatar: 'https://sun6-23.userapi.com/s/v1/ig2/c_IviuU0uE6m6USOjCIvi2-VrSOlMfI0K57G3_LN0HzA5zhpDOZhJdb0322FIFZAqNwMDC2QN8dJi1gF2FoeuC8d.jpg?size=50x50&quality=96&crop=0,0,452,452&ava=1', // можно менять
+        name: 'Billy Harrington',  // можно менять
     },
     message: {
-        text: 'Hello everyone! Lets do it!!!', // можно менять
+        text: 'Welcome to the club Buddy', // можно менять
         time: '21:00', // можно менять
     },
 }
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Ilych', // можно менять
+        avatar: 'https://pp.userapi.com/c834301/v834301547/175ca5/EVZ-20MXzsw.jpg?ava=1', // можно менять
+        name: 'Van DarkHolme', // можно менять
     },
     message: {
-        text: 'Okkaaay!!! Lets do it now!', // можно менять
+        text: 'Come on! Lets go', // можно менять
         time: '21:05', // можно менять
     },
 }

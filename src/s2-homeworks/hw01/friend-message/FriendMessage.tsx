@@ -1,14 +1,12 @@
 import React from 'react'
 import s from './FriendMessage.module.css'
-import {MessageType} from '../HW1'
+import {MessagePropsType} from "../message/Message";
 
 // создать тип вместо any и отобразить приходящие данные
 
-export type MessagePropsType = {
-    message: MessageType
-};
+export type FriendMessagePropsType = MessagePropsType;
 
-const FriendMessage = (props: MessagePropsType) => {
+const FriendMessage = (props: FriendMessagePropsType) => {
     return (
         <div
             id={'hw1-friend-message-' + props.message.id}
