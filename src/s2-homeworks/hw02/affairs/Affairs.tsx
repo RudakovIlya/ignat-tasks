@@ -11,27 +11,11 @@ type AffairsPropsType = {
 }
 
 function Affairs(props: AffairsPropsType) {
-    const setAll = () => {
-        props.setFilter('all')
-    };
-    const setHigh = () => {
-        props.setFilter('high')
-    };
-    const setMiddle = () => {
-        props.setFilter('middle')
-    };
-    const setLow = () => {
-        props.setFilter('low')
-    };
 
     const set = (event: MouseEvent<HTMLButtonElement>) => {
         props.setFilter(event.currentTarget.value as FilterType);
     }
 
-    const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
-    const cnHigh = s.button + ' ' + s.high + (props.filter === 'high' ? ' ' + s.active : '')
-    const cnMiddle = s.button + ' ' + s.middle + (props.filter === 'middle' ? ' ' + s.active : '')
-    const cnLow = s.button + ' ' + s.low + (props.filter === 'low' ? ' ' + s.active : '')
     const mappedAffairs = props.data.map((a: AffairType) => (
         <Affair
             key={a._id}
@@ -40,24 +24,28 @@ function Affairs(props: AffairsPropsType) {
         />
     ));
 
-    const ALL: string = 'all';
-    const HIGH: string = 'high';
-    const MIDDLE: string = 'middle';
-    const LOW: string = 'low';
+    const setClass = (filter: FilterType) => {
+        return `${s.button} ${s[filter]} ${(props.filter === filter ? ' ' + s.active : '')}`
+    }
+
+    const ALL: FilterType = 'all';
+    const HIGH: FilterType = 'high';
+    const MIDDLE: FilterType = 'middle';
+    const LOW: FilterType = 'low';
 
     return (
         <div>
             <div className={s.buttonContainer}>
-                <button value={ALL} id={'hw2-button-all'} onClick={set} className={cnAll}>
+                <button value={ALL} id={'hw2-button-all'} onClick={set} className={setClass(ALL)}>
                     All
                 </button>
-                <button value={HIGH} id={'hw2-button-high'} onClick={set} className={cnHigh}>
+                <button value={HIGH} id={'hw2-button-high'} onClick={set} className={setClass(HIGH)}>
                     High
                 </button>
-                <button value={MIDDLE} id={'hw2-button-middle'} onClick={set} className={cnMiddle}>
+                <button value={MIDDLE} id={'hw2-button-middle'} onClick={set} className={setClass(MIDDLE)}>
                     Middle
                 </button>
-                <button value={LOW} id={'hw2-button-low'} onClick={set} className={cnLow}>
+                <button value={LOW} id={'hw2-button-low'} onClick={set} className={setClass(LOW)}>
                     Low
                 </button>
             </div>
