@@ -38,20 +38,26 @@ function Affairs(props: AffairsPropsType) {
             affair={a}
             deleteAffairCallback={props.deleteAffairCallback}
         />
-    ))
+    ));
+
+    const ALL: string = 'all';
+    const HIGH: string = 'high';
+    const MIDDLE: string = 'middle';
+    const LOW: string = 'low';
+
     return (
         <div>
             <div className={s.buttonContainer}>
-                <button value={'all'} id={'hw2-button-all'} onClick={set} className={cnAll}>
+                <button value={ALL} id={'hw2-button-all'} onClick={set} className={cnAll}>
                     All
                 </button>
-                <button value={'high'} id={'hw2-button-high'} onClick={set} className={cnHigh}>
+                <button value={HIGH} id={'hw2-button-high'} onClick={set} className={cnHigh}>
                     High
                 </button>
-                <button value={'middle'} id={'hw2-button-middle'} onClick={set} className={cnMiddle}>
+                <button value={MIDDLE} id={'hw2-button-middle'} onClick={set} className={cnMiddle}>
                     Middle
                 </button>
-                <button value={'low'} id={'hw2-button-low'} onClick={set} className={cnLow}>
+                <button value={LOW} id={'hw2-button-low'} onClick={set} className={cnLow}>
                     Low
                 </button>
             </div>
