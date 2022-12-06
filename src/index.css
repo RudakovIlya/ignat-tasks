@@ -14,7 +14,8 @@ body {
     box-sizing: border-box;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[class*="container"] {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
