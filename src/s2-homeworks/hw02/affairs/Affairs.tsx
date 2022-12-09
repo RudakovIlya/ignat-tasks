@@ -2,6 +2,7 @@ import React, {MouseEvent} from 'react'
 import Affair from './affair/Affair'
 import {AffairType, FilterType} from '../HW2'
 import s from './Affairs.module.css'
+import {useAutoAnimate} from "@formkit/auto-animate/react";
 
 type AffairsPropsType = {
     data: Array<AffairType>,
@@ -33,6 +34,8 @@ function Affairs(props: AffairsPropsType) {
     const MIDDLE: FilterType = 'middle';
     const LOW: FilterType = 'low';
 
+    const [div] = useAutoAnimate<HTMLDivElement>()
+
     return (
         <div>
             <div className={s.buttonContainer}>
@@ -49,7 +52,7 @@ function Affairs(props: AffairsPropsType) {
                     Low
                 </button>
             </div>
-            <div className={s.affairs}>{mappedAffairs}</div>
+            <div ref={div} className={s.affairs}>{mappedAffairs}</div>
         </div>
     )
 }
