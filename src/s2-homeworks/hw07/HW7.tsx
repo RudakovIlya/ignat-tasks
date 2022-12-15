@@ -11,14 +11,19 @@ import s from './HW7.module.css'
 * 4 - сделать стили в соответствии с дизайном
 * */
 
-const arr = [
+export type ValueType = {
+    id: number
+    value: string
+}
+
+const arr: ValueType[] = [
     {id: 1, value: 'Pre-junior'},
     {id: 2, value: 'Junior'},
     {id: 3, value: 'Junior-Plus'},
 ] // value может быть изменено
 
 const HW7 = () => {
-    const [value, onChangeOption] = useState(1) // селект и радио должны работать синхронно
+    const [value, onChangeOption] = useState<number>(1)
 
     return (
         <div id={'hw7'}>
