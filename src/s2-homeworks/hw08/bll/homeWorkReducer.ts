@@ -4,15 +4,22 @@ type ActionType =
     | { type: 'sort'; payload: 'up' | 'down' }
     | { type: 'check'; payload: number }
 
-export const homeWorkReducer = (state: any, action: any): any => { // need to fix any
+const compareFooAZ = (a: UserType, b: UserType) => {
+    return a.name > b.name ? 1 : -1
+}
+
+const compareFooZA = (a: UserType, b: UserType) => {
+    return a.name < b.name ? 1 : -1
+}
+
+export const homeWorkReducer = (state: UserType[], action: ActionType): UserType[] => { // need to fix any
+    const copyState = [...state];
     switch (action.type) {
         case 'sort': { // by name
-
-            return state // need to fix
+            return action.payload === 'up' ? copyState.sort(compareFooAZ) : copyState.sort(compareFooZA)
         }
         case 'check': {
-
-            return state // need to fix
+            return state.filter(element => element.age > 18);
         }
         default:
             return state

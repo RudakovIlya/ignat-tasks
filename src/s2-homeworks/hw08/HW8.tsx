@@ -4,6 +4,7 @@ import s from './HW8.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import User from './User'
+import {useAutoAnimate} from "@formkit/auto-animate/react";
 
 /*
 * 1 - дописать типы и логику (сортировка по имени, фильтрация по совершеннолетию) homeWorkReducer, проверить тестом
@@ -18,13 +19,15 @@ export type UserType = {
 }
 
 const initialPeople: UserType[] = [
-    // студенты могут поменять имя/возраст/количество объектов, _id должны быть целочисленные
     {_id: 0, name: 'Кот', age: 3},
     {_id: 1, name: 'Александр', age: 66},
     {_id: 2, name: 'Коля', age: 16},
     {_id: 3, name: 'Виктор', age: 44},
     {_id: 4, name: 'Дмитрий', age: 40},
-    {_id: 5, name: 'Ирина', age: 55},
+    {_id: 5, name: 'Борис', age: 18},
+    {_id: 6, name: 'Ярослав', age: 19},
+    {_id: 7, name: 'Яна', age: 34},
+    {_id: 8, name: 'Илья', age: 24},
 ]
 
 const HW8 = () => {
@@ -53,11 +56,14 @@ const HW8 = () => {
         setCurrentSort('18')
     }
 
+    const [table] = useAutoAnimate<HTMLTableSectionElement>();
+    const [t] = useAutoAnimate<HTMLTableElement>();
+
     return (
-        <div id={'hw3'}>
+        <div  id={'hw3'}>
             <div className={s2.hwTitle}>Homework #8</div>
             <div className={s2.hw}>
-                <div className={s.container}>
+                <div className={s.body}>
                     <div className={s.buttonsContainer}>
                         <SuperButton
                             id={'hw8-button-up'}
@@ -82,7 +88,7 @@ const HW8 = () => {
                         </SuperButton>
                     </div>
 
-                    <table id={'hw8-users'} className={s.users}>
+                    <table ref={t} id={'hw8-users'} className={s.users}>
                         <thead className={s.thead}>
                         <tr>
                             <td className={s.nameCol}>Name</td>
@@ -90,7 +96,7 @@ const HW8 = () => {
                         </tr>
                         </thead>
 
-                        <tbody>{finalPeople}</tbody>
+                        <tbody ref={table}>{finalPeople}</tbody>
                     </table>
                 </div>
             </div>
