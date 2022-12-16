@@ -60,7 +60,7 @@ const HW8 = () => {
     const [t] = useAutoAnimate<HTMLTableElement>();
 
     return (
-        <div  id={'hw3'}>
+        <div id={'hw3'}>
             <div className={s2.hwTitle}>Homework #8</div>
             <div className={s2.hw}>
                 <div className={s.body}>
