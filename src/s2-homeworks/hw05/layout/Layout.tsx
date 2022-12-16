@@ -9,9 +9,7 @@ type PropsType = {
 
 export const Layout: FC<PropsType> = ({children}) => {
     const [open, setOpen] = useState(false)
-    const handleClose = () => setOpen(false)
-    const handleOpen = () => setOpen(true)
-
+    const handleClick = () => setOpen(!open)
     useEffect(() => {
         open && (document.body.style.overflow = 'hidden')
         !open && (document.body.style.overflow = 'unset')
@@ -19,10 +17,9 @@ export const Layout: FC<PropsType> = ({children}) => {
 
     return (
         <>
-            <Sidebar open={open} handleClose={handleClose}/>
-            <Header handleOpen={handleOpen}/>
+            <Sidebar open={open} handleClose={handleClick}/>
+            <Header handleOpen={handleClick}/>
             <div className={styles.container}>
-                {/*страницы*/}
                 {children}
             </div>
         </>
