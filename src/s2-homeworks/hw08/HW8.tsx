@@ -4,7 +4,7 @@ import s from './HW8.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import User from './User'
-import {useAutoAnimate} from "@formkit/auto-animate/react";
+
 
 /*
 * 1 - дописать типы и логику (сортировка по имени, фильтрация по совершеннолетию) homeWorkReducer, проверить тестом
@@ -53,9 +53,6 @@ const HW8 = () => {
         setCurrentSort('18')
     }
 
-    const [table] = useAutoAnimate<HTMLTableSectionElement>();
-    const [t] = useAutoAnimate<HTMLTableElement>();
-
     return (
         <div id={'hw3'}>
             <div className={s2.hwTitle}>Homework #8</div>
@@ -85,7 +82,7 @@ const HW8 = () => {
                         </SuperButton>
                     </div>
 
-                    <table ref={t} id={'hw8-users'} className={s.users}>
+                    <table id={'hw8-users'} className={s.users}>
                         <thead className={s.thead}>
                         <tr>
                             <td className={s.nameCol}>Name</td>
@@ -93,7 +90,7 @@ const HW8 = () => {
                         </tr>
                         </thead>
 
-                        <tbody ref={table}>{finalPeople}</tbody>
+                        <tbody>{finalPeople}</tbody>
                     </table>
                 </div>
             </div>
