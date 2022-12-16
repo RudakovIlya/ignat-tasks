@@ -19,7 +19,7 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
             return action.payload === 'up' ? copyState.sort(compareFooAZ) : copyState.sort(compareFooZA)
         }
         case 'check': {
-            return state.filter(element => element.age >= action.payload);
+            return copyState.filter(element => element.age >= action.payload);
         }
         default:
             return state
