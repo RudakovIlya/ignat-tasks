@@ -1,9 +1,10 @@
 .buttonsContainer {
-    display: flex;
+    display: inline-flex;
     column-gap: 21px;
 }
 
 .clock {
+    display: inline-block;
 }
 
 .watch {
