@@ -15,6 +15,7 @@
     height: 48px;
     object-fit: cover;
     margin-bottom: 5px;
+    border-radius: 50%;
 }
 
 .friendText {

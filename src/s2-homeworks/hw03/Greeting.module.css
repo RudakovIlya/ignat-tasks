@@ -71,10 +71,10 @@
 
 .text {
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--color);
     margin-bottom: 10px;
 }
 
 .greeting {
-    color: #000000;
+    color: var(--color);
 }

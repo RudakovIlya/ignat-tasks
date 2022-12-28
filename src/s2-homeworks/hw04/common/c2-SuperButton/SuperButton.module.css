@@ -11,8 +11,8 @@
 }
 
 
-.button:active:before{
-    right: 0%;
+.button:active:before {
+    right: 0;
 }
 
 .disabled {

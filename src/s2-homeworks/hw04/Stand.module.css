@@ -12,9 +12,11 @@
     gap: 48px;
     flex: 0 1 372px;
 }
+
 .inputs > div {
     flex: 0 1 100%;
 }
+
 .buttons {
     display: flex;
     flex-direction: column;

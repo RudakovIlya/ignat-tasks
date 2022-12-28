@@ -4,8 +4,8 @@
     flex: 0 0 27.8%;
     font-size: 14px;
     line-height: 17px;
-    color: #000000;
-    background: #FFFFFF;
+    color: var(--color);
+    background: var(--background);
     border: 1px solid #C2C2C2;
     border-radius: 2px;
 }
