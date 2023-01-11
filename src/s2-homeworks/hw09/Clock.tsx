@@ -59,7 +59,7 @@ function Clock() {
                 </span>
             </div>
 
-            <div style={{marginBottom: show ? 27 : 0}} id={'hw9-more'}>
+            <div style={{marginBottom: 27}} id={'hw9-more'}>
                 <div className={s.more}>
                     {show ? (
                         <>
