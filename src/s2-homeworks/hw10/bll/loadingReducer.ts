@@ -13,6 +13,7 @@ export const loadingAC = (isLoading: boolean): LoadingActionType => ({
 } as const)
 
 export const loadingReducer = (state = initState, action: LoadingActionType): typeof state => {
+
     switch (action.type) {
         case "CHANGE_LOADING":
             return {

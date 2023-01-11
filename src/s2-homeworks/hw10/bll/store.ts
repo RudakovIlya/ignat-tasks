@@ -1,30 +1,32 @@
 import {loadingReducer} from './loadingReducer'
-import {combineReducers, createStore} from 'redux'
+import {combineReducers, compose, createStore} from 'redux'
 import {themeReducer} from '../../hw12/bll/themeReducer'
-import {restoreState, saveState} from "../../hw06/localStorage/localStorage";
-import throttle from "lodash/throttle";
+import {persistStore, persistReducer} from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
 const reducers = combineReducers({
     loading: loadingReducer, // hw10
     theme: themeReducer, // hw12
 })
 
-const configureStore = () => {
-
-    const persistedState = restoreState<any>('state', reducers);
-
-    const store = createStore(reducers, persistedState)
-
-    store.subscribe(throttle(() => {
-        saveState('state', {
-            loading: store.getState().loading,
-            theme: store.getState().theme,
-        })
-    }, 1000))
-    return store
+declare global {
+    interface Window {
+        __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+    }
 }
 
-const store = configureStore()
+const persistConfig = {
+    key: 'state',
+    storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, reducers)
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(persistedReducer, composeEnhancers())
+
+export const persistor = persistStore(store)
 
 export default store
 
