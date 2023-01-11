@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ignat-tasks/static/css/main.e259a45f.css",
-    "main.js": "/ignat-tasks/static/js/main.fc3426f3.js",
+    "main.css": "/ignat-tasks/static/css/main.2f978a95.css",
+    "main.js": "/ignat-tasks/static/js/main.ae4754e8.js",
     "static/media/200.svg": "/ignat-tasks/static/media/200.2b4de1542921864a6ecb8c3301ea4670.svg",
     "static/media/error.svg": "/ignat-tasks/static/media/error.9a99652a785b87f2f448e23e5da3045d.svg",
     "static/media/500.svg": "/ignat-tasks/static/media/500.65355d1617c6a93fc93572680052f0b7.svg",
@@ -12,11 +12,11 @@
     "static/media/checked.svg": "/ignat-tasks/static/media/checked.0b6a1bcf5d417ff0a947.svg",
     "index.html": "/ignat-tasks/index.html",
     "static/media/burger.svg": "/ignat-tasks/static/media/burger.e4e6b98e4ee0b2dfcd76d02a9eed2e34.svg",
-    "main.e259a45f.css.map": "/ignat-tasks/static/css/main.e259a45f.css.map",
-    "main.fc3426f3.js.map": "/ignat-tasks/static/js/main.fc3426f3.js.map"
+    "main.2f978a95.css.map": "/ignat-tasks/static/css/main.2f978a95.css.map",
+    "main.ae4754e8.js.map": "/ignat-tasks/static/js/main.ae4754e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.e259a45f.css",
-    "static/js/main.fc3426f3.js"
+    "static/css/main.2f978a95.css",
+    "static/js/main.ae4754e8.js"
   ]
 }
