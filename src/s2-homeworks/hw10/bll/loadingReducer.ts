@@ -7,6 +7,11 @@ type LoadingActionType = {
     isLoading: boolean
 }
 
+export const loadingAC = (isLoading: boolean): LoadingActionType => ({
+    type: 'CHANGE_LOADING',
+    isLoading,
+} as const)
+
 export const loadingReducer = (state = initState, action: LoadingActionType): typeof state => {
     switch (action.type) {
         case "CHANGE_LOADING":
@@ -19,7 +24,3 @@ export const loadingReducer = (state = initState, action: LoadingActionType): ty
     }
 }
 
-export const loadingAC = (isLoading: boolean): LoadingActionType => ({
-    type: 'CHANGE_LOADING',
-    isLoading,
-})
