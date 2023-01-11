@@ -15,7 +15,7 @@ const compareFooZA = (a: UserType, b: UserType) => {
 export const homeWorkReducer = (state: UserType[], action: ActionType): UserType[] => { // need to fix any
     const copyState = [...state];
     switch (action.type) {
-        case 'sort': { // by name
+        case 'sort': {
             return action.payload === 'up' ? copyState.sort(compareFooAZ) : copyState.sort(compareFooZA)
         }
         case 'check': {

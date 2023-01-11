@@ -4,9 +4,11 @@ import {Slider, SliderProps} from '@mui/material'
 const SuperRange: React.FC<SliderProps> = (props) => {
     return (
         <Slider
-            sx={ // стили для слайдера // пишет студент
+            sx={
                 {
                     color: '#0066CC',
+                    paddingRight: 1,
+                    paddingLeft: 1,
                     height: 8,
                     '& .MuiSlider-track': {
                         border: 'none',
@@ -44,7 +46,7 @@ const SuperRange: React.FC<SliderProps> = (props) => {
                     },
                 }
             }
-            {...props} // отдаём слайдеру пропсы если они есть (value например там внутри)
+            {...props}
         />
     )
 }

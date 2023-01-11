@@ -5,14 +5,8 @@
     cursor: pointer;
 }
 
-/*input[type="checkbox"] - no*/
-
 .checkbox {
     appearance: none;
-    /*Свойство appearance изменяет внешний вид элемента интерфейса, при сохранении его функции.
-       Если задать значение none, то чекбокс пропадет, но по нему, тем не менее,
-       можно щелкать и состояние чекбокса будет меняться*/
-
     width: 18px;
     height: 18px;
 
@@ -29,9 +23,7 @@
 
 .checkbox:checked {
     appearance: none;
-
     background-image: url('checked.svg');
-    /*background: #99ff99;*/
 }
 
 .checkbox:focus {

@@ -12,7 +12,6 @@ type GreetingPropsType = {
     lastUserName?: string | undefined
 }
 
-// презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
     {
         name,

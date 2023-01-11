@@ -4,12 +4,34 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-color: #000000;
+
+    --background: #FFFFFF;
+}
+
 body {
     margin: 0;
+    color: var(--main-color);
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
+}
+
+[data-theme='1'] {
+    --main-color: #000000;
+    --background: #FFFFFF;
+}
+
+[data-theme='2'] {
+    --color: #000000;
+    --background: #DDEEFF;
+}
+
+[data-theme='3'] {
+    --main-color: #FFFFFF;
+    --background: #212A34;
 }
 
 [class*="container"] {

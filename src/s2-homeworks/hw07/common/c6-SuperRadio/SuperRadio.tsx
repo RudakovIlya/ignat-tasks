@@ -11,7 +11,7 @@ type DefaultRadioPropsType = DetailedHTMLProps<
     InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
 >
-// тип пропсов обычного спана
+
 type DefaultSpanPropsType = DetailedHTMLProps<
     HTMLAttributes<HTMLSpanElement>,
     HTMLSpanElement
@@ -52,7 +52,6 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
                     name={name}
                     checked={value === o.id}
                     value={o.id}
-                    // name, checked, value делают студенты
                     onChange={onChangeCallback}
                     {...restProps}
                 />

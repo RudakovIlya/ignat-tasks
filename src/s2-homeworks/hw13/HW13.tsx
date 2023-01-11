@@ -8,12 +8,6 @@ import error400 from './images/400.svg'
 import error500 from './images/500.svg'
 import errorUnknown from './images/error.svg'
 
-/*
-* 1 - дописать функцию send
-* 2 - disabled кнопки пока идёт запрос
-* 3 - сделать стили в соответствии с дизайном
-* */
-
 const HW13 = () => {
     const [code, setCode] = useState('')
     const [text, setText] = useState('')
@@ -38,7 +32,6 @@ const HW13 = () => {
                 setImage(success200)
                 setText(res.data.errorText)
                 setInfo(res.data.info)
-                // дописать
             })
             .catch((e) => {
                 if (e.response.status) {
@@ -64,7 +57,6 @@ const HW13 = () => {
                         id={'hw13-send-true'}
                         onClick={send(true)}
                         xType={'secondary'}
-                        // дописать
                         disabled={info === '...loading'}
                     >
                         Send true
@@ -73,7 +65,6 @@ const HW13 = () => {
                         id={'hw13-send-false'}
                         onClick={send(false)}
                         xType={'secondary'}
-                        // дописать
                         disabled={info === '...loading'}
                     >
                         Send false
@@ -83,16 +74,14 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         disabled={info === '...loading'}
-                        // дописать
                     >
                         Send undefined
                     </SuperButton>
                     <SuperButton
                         id={'hw13-send-null'}
-                        onClick={send(null)} // имитация запроса на не корректный адрес
+                        onClick={send(null)}
                         xType={'secondary'}
                         disabled={info === '...loading'}
-                        // дописать
                     >
                         Send null
                     </SuperButton>

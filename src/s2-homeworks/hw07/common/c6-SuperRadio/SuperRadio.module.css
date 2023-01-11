@@ -14,7 +14,7 @@
     height: 20px;
     border-radius: 50%;
     background-color: transparent;
-    border: 2px solid var(--color);
+    border: 2px solid var(--main-color);
 }
 
 .radio::after {
@@ -22,7 +22,7 @@
     content: "";
     position: absolute;
     height: 12px;
-    background-color: var(--color);
+    background-color: var(--main-color);
     border-radius: 50%;
     top: 60%;
     left: 50%;

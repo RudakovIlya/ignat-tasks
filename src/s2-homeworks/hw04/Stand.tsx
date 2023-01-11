@@ -12,7 +12,6 @@ export const Stand = () => {
     return (
         <div id={'hw4-stand'} className={s.stand}>
             <div className={s.inputs}>
-                {/*совместим со старым кодом:*/}
                 <div>
                     <SuperInputText
                         id={'hw4-super-input-like-old'}
@@ -21,7 +20,6 @@ export const Stand = () => {
                         onChange={(e) => setValue(e.currentTarget.value)}
                     />
                 </div>
-                {/*инпут с ошибкой:*/}
                 <div>
                     <SuperInputText
                         id={'hw4-super-input-with-error'}
@@ -42,19 +40,16 @@ export const Stand = () => {
             </div>
 
             <div className={s.buttons}>
-                {/*обычная кнопка:*/}
                 <div>
                     <SuperButton id={'hw4-super-button-default'}>
                         Default
                     </SuperButton>
                 </div>
-                {/*красная кнопка:*/}
                 <div>
                     <SuperButton id={'hw4-super-button-red'} xType={'red'}>
                         Red
                     </SuperButton>
                 </div>
-                {/*задизэйбленная кнопка:*/}
                 <div>
                     <SuperButton
                         id={'hw4-super-button-disabled'}
@@ -64,7 +59,6 @@ export const Stand = () => {
                         Disabled
                     </SuperButton>
                 </div>
-                {/*задизэйбленная кнопка:*/}
                 <div>
                     <SuperButton
                         id={'hw4-super-button-secondary'}
@@ -76,7 +70,6 @@ export const Stand = () => {
             </div>
 
             <div className={s.checkboxes}>
-                {/*чекбокс с текстом:*/}
                 <div>
                     <SuperCheckbox
                         id={'hw4-super-checkbox-with-text'}
@@ -86,7 +79,6 @@ export const Stand = () => {
                         some text
                     </SuperCheckbox>
                 </div>
-                {/*совместим со старым кодом:*/}
                 <div>
                     <SuperCheckbox
                         id={'hw4-super-checkbox-like-old'}
